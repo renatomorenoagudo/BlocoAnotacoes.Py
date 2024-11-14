@@ -32,4 +32,5 @@ if arguments[0] == "read":
     #leitura das notas
 
 if arguments[0] == "new":
-    #salvar
+    titulo = arguments [1]  #TODO: tratar exception
+    #criação da nota
