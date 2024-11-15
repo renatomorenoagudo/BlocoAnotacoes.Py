@@ -31,10 +31,13 @@ if arguments[0] not in cmds:
 
 if arguments[0] == "read":
     #leitura das notas
-    pass
-    #for line open(filepath):
-      #  title, tag, text = line.split("\t")
-       # if tag.lower()  == 
+    for line in open(filepath):
+        title, tag, text = line.split("\t")
+        if tag.lower()  == arguments[1].lower():
+            print(f"Title: {title}")
+            print(f"Text: {text}")
+            print(f"-"  * 38)
+            print()
 
 if arguments[0] == "new":
     titulo = arguments [1]  #TODO: tratar exception
@@ -45,4 +48,4 @@ if arguments[0] == "new":
     ]
     # \t - tsv
     with open (filepath, "a") as file_:
-        file_.write("\t".join(text))
+        file_.write("\t".join(text)+"\n")
